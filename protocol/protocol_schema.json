@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NexusRemoteProtocol",
+  "description": "Standard communication protocol for Nexus Remote Windows Agent and Android Mobile Client",
+  "type": "object",
+  "required": ["version", "type", "timestamp"],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "enum": [1]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "discover_request",
+        "discover_response",
+        "pair_request",
+        "pair_response",
+        "auth_request",
+        "auth_response",
+        "telemetry",
+        "process_list_request",
+        "process_list_response",
+        "process_kill_request",
+        "process_kill_response",
+        "mouse_move",
+        "mouse_button",
+        "mouse_scroll",
+        "keyboard",
+        "keyboard_text",
+        "system_command",
+        "system_command_response",
+        "screen_start",
+        "screen_stop",
+        "screen_config",
+        "screen_frame",
+        "ping",
+        "pong"
+      ]
+    },
+    "timestamp": {
+      "type": "integer"
+    },
+    "payload": {
+      "type": "object"
+    }
+  }
+}

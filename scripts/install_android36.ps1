@@ -1,0 +1,5 @@
+$sdkRoot = "C:\Android\Sdk"
+$sdkManager = "$sdkRoot\cmdline-tools\latest\bin\sdkmanager.bat"
+cmd /c "echo y | `"$sdkManager`" --sdk_root=`"$sdkRoot`" `"platforms;android-36`" `"build-tools;36.0.0`""
+cmd /c "echo y | `"$sdkManager`" --sdk_root=`"$sdkRoot`" --licenses"
+cmd /c "echo y | `"$sdkManager`" --sdk_root=`"$sdkRoot`" --licenses"
